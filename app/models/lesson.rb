@@ -1,7 +1,7 @@
 class Lesson < ApplicationRecord
   include ActiveModel::Serialization
-  validates :first_name, presence: true
+  validates :coach_id, presence: true
 
-  belongs_to :coach, foreign_key: "coachId"
-  belongs_to :student, foreign_key: "studentId", optional: true
+  belongs_to :coach, foreign_key: "coach_id"
+  belongs_to :student, foreign_key: "student_id", optional: true
 end
