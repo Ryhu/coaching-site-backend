@@ -69,3 +69,42 @@ Lesson.create(
   date: '1/21/2023',
   time: 8
 )
+
+Lesson.create(
+  title: "Alan's empty lesson",
+  description: "physics 101 part 245",
+  notes: 'why wont anyone come',
+  coach_id: 1,
+  date: '1/24/3024',
+  time: 8
+)
+
+Lesson.create(
+  title: "Alan's future class for #1",
+  description: "physics 101 part 245",
+  notes: 'why wont anyone come',
+  coach_id: 1,
+  student_id: 1,
+  date: '1/24/3024',
+  time: 8
+)
+
+Lesson.create(
+  title: "Alan's second future class for #1",
+  description: "physics 101 part 245",
+  notes: 'why wont anyone come',
+  coach_id: 1,
+  student_id: 1,
+  date: '1/24/3024',
+  time: 8
+)
+
+Lesson.create(
+  title: "Alan's future class for #2",
+  description: "physics 101 part 245",
+  notes: 'why wont anyone come',
+  coach_id: 1,
+  student_id: 2,
+  date: '1/24/3024',
+  time: 8
+)
