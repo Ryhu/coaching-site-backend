@@ -1,15 +1,6 @@
 require 'pry'
 
 class LessonsController < ApplicationController
-  def available_lessons
-    lessons = Lesson.where(student_id: nil)
-    if lessons
-      render json: lessons, each_serializer: LessonSerializer
-    else 
-      render json: lessons.errors
-    end
-  end
-
   def create
     lesson = Lesson.create!(lesson_params)
     
@@ -22,8 +13,9 @@ class LessonsController < ApplicationController
 
   def update
     # students enrolling and coach grading
-    lesson = Lesson.find(lesson_params[:id])
-    if lesson
+    lesson = Lesson.find(params[:id])
+    
+    if lesson.update!(lesson_params)
       render json: lesson
     else 
       render json: lesson.errors

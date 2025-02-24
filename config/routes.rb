@@ -15,11 +15,13 @@ Rails.application.routes.draw do
   get "/students", to: "students#index"
   get "/student/:id", to: "students#show"
   get "/student/:id/lessons", to: "students#lessons"
+  get "/student/:id/enrollable_lessons", to: "students#enrollable_lessons"
+
 
   get "/coaches", to: "coaches#index"
   get "/coach/:id", to: "coaches#show"
   get "/coach/:id/lessons", to: "coaches#lessons"
 
-  get "/lessons", to: "lessons#available_lessons"
   post "/lessons", to: "lessons#create"
+  patch "/lesson/:id", to: "lessons#update"
 end
