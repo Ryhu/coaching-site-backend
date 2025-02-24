@@ -1,13 +1,17 @@
 class StudentsController < ApplicationController
 
-  # def index
-  # end
+  def index
+    students = Student.all
+    render json: students
+  end
 
   # def create
   # end
 
-  # def show
-  # end
+  def show
+    student = Student.find!(lesson_params[:id])
+      render json: lesson
+  end
 
   # def destroy
   # end
@@ -21,7 +25,7 @@ class StudentsController < ApplicationController
   private
 
   def student_params
-    params.permit(:first_name, :last_name, :id, :title. :phone)
+    params.permit(:first_name, :last_name, :id, :title, :phone)
   end
 
 

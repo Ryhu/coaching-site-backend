@@ -1,13 +1,17 @@
 class CoachesController < ApplicationController
 
-  # def index
-  # end
+  def index
+    coaches = Coach.all
+    render json: coaches
+  end
 
   # def create
   # end
 
-  # def show
-  # end
+  def show
+    coach = Coach.find!(lesson_params[:id])
+      render json: lesson
+  end
 
   # def destroy
   # end
@@ -17,11 +21,10 @@ class CoachesController < ApplicationController
     render json: lessons
   end
 
-
   private
 
   def coach_params
-    params.permit(:first_name, :last_name, :id, :title. :phone)
+    params.permit(:first_name, :last_name, :id, :title, :phone)
   end
 
 
